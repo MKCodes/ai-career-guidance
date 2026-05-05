@@ -22,7 +22,11 @@ import {
 import { checkUser } from '@/lib/checkUser';
 
 const Header = async () => {
+  try {
     await checkUser();
+    } catch (error) {
+        // silently fail on non-page routes (e.g. API routes)
+    }
     return (
         <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
           <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
