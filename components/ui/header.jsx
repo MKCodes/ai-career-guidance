@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import {SignedOut} from "@clerk/nextjs" 
 import {SignedIn, SignInButton, UserButton} from "@clerk/nextjs" 
